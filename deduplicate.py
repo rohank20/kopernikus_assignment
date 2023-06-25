@@ -57,10 +57,10 @@ def main(dir_path):
                 gray_img_1 = preprocess_image_change_detection(img_1, gaussian_blur_radius_list)
                 gray_img_2 = preprocess_image_change_detection(img_2, gaussian_blur_radius_list)
 
-                min_cnt_area = 0.0001 * img_area  # number low, high unique_score
+                min_cnt_area = 0.0001 * img_area  # area lower -> high unique_score
                 uniqueness_score, res_cnts, thresh = compare_frames_change_detection(gray_img_1, gray_img_2,
                                                                                      min_cnt_area)
-                if uniqueness_score < 0.01 * img_area:  # threshold low, fewer deletions
+                if uniqueness_score < 0.01 * img_area:  # threshold lower -> fewer deletions
                     os.remove(os.path.join(dir_path, file))
                     total += 1
             except:
