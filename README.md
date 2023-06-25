@@ -4,7 +4,7 @@ Kopernikus Automotive Deduplication algorithm task
 
 To run the deduplication algorithm using the following command:
 
-`python3 deduplicate.py --dir_path <PATH_TO_IMAGES>`
+`python3 deduplicate.py --dir_path <PATH_TO_IMAGES_DIRECTORY>`
 
 Regarding the answers to the questions in the task document:
 
